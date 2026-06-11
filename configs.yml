@@ -1,0 +1,54 @@
+Twibot-20:
+  lr: 0.002
+  lr_f: 0.0002
+  num_hidden: 128
+  num_heads_encoder: 4
+  weight_decay: 2e-3
+  weight_decay_f: 5e-2
+  max_epoch: 200
+  max_epoch_f: 165
+  feat_mask_rate: "0.4,+0.01,0.8"
+  feat_drop: 0.4
+  attn_drop: 0.5
+  finetune_drop: 0.4
+  optimizer: adam
+  replace_rate: 0.25
+  scheduler: True
+  leave_unchanged_rate: 0.15
+  cluster_num: 20
+  interval: 10
+  advanced_loss_rate: 0.0005
+  instance_prototype_loss_rate: 1
+  basevector_num: 20
+  bvlen_factor: 1
+  use_align_loss: True
+  align_loss_rate: 0.13
+  seeds: [8608, 1272, 4620]
+
+
+MGTAB-FF:
+  lr: 5e-4
+  lr_f: 2.5e-4
+  num_hidden: 128
+  num_heads_encoder: 4
+  weight_decay: 2e-3
+  weight_decay_f: 1e-4
+  max_epoch: 100
+  max_epoch_f: 200
+  feat_mask_rate: "0.4,+0.01,0.6"
+  feat_drop: 0.4
+  attn_drop: 0.3
+  finetune_drop: 0.4
+  optimizer: adam
+  replace_rate: 0.25
+  scheduler: True
+  leave_unchanged_rate: 0.15
+  cluster_num: 20
+  interval: 10
+  advanced_loss_rate: 0.005
+  instance_prototype_loss_rate: 1
+  basevector_num: 10
+  bvlen_factor: 1
+  use_align_loss: True
+  align_loss_rate: 0.24
+  seeds: [1030, 9026, 6834]
