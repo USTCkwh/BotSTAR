@@ -6,7 +6,7 @@ Twibot-20:
   weight_decay: 2e-3
   weight_decay_f: 5e-2
   max_epoch: 200
-  max_epoch_f: 165
+  max_epoch_f: 200
   feat_mask_rate: "0.4,+0.01,0.8"
   feat_drop: 0.4
   attn_drop: 0.5
@@ -22,9 +22,10 @@ Twibot-20:
   basevector_num: 20
   bvlen_factor: 1
   use_align_loss: True
-  align_loss_rate: 0.13
-  seeds: [8608, 1272, 4620]
-
+  align_loss_rate: 0.3
+  adapt_align_loss_rate: 0.2
+  edge_add_ratio: 0.5
+  rep_sim_analysis: False
 
 MGTAB-FF:
   lr: 5e-4
@@ -34,7 +35,7 @@ MGTAB-FF:
   weight_decay: 2e-3
   weight_decay_f: 1e-4
   max_epoch: 100
-  max_epoch_f: 200
+  max_epoch_f: 300
   feat_mask_rate: "0.4,+0.01,0.6"
   feat_drop: 0.4
   attn_drop: 0.3
@@ -50,5 +51,7 @@ MGTAB-FF:
   basevector_num: 10
   bvlen_factor: 1
   use_align_loss: True
-  align_loss_rate: 0.24
-  seeds: [1030, 9026, 6834]
+  align_loss_rate: 0.4
+  adapt_align_loss_rate: 0.2
+  edge_add_ratio: 0.5
+  rep_sim_analysis: False
