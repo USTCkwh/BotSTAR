@@ -1,6 +1,5 @@
 dataset/**/*.pt
 /.idea/
-runlog/
 __pycache__/
 models/__pycache__/
 visualizations/

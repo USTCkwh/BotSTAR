@@ -206,20 +206,10 @@ def main(args):
     run_start = datetime.now()
     result_dir = os.path.join('run_results', run_start.strftime('%Y%m%d'))
     os.makedirs(result_dir, exist_ok=True)
-    result_path = os.path.join(result_dir, run_start.strftime('%H%M%S') + '.txt')
-    with open(result_path, 'w') as f:
-        f.write(f"# {run_start.strftime('%Y-%m-%d %H:%M:%S')} dataset={dataset_name} "
-                f"num_hidden={num_hidden} "
-                f"max_epoch={max_epoch} lr={lr} lr_f={lr_f}\n")
-        if seed_epoch_map is not None:
-            f.write(f"# seed:max_epoch_f={seed_epoch_map}\n\n")
-        else:
-            f.write(f"# max_epoch_f={max_epoch_f} seeds={list(seeds)}\n\n")
-    print(f"结果写入: {result_path}")
     for i, seed in enumerate(seeds):
         if seed_epoch_map is not None:
             max_epoch_f = seed_epoch_map[seed]
-        print(f"####### Run {i} for seed {seed} max_epoch_f={max_epoch_f}")
+        print(f"####### Run {i} #######")
         set_random_seed(seed)
         # 标签效率分析：train_rate < 1 时在克隆图上按比例掩码训练节点（不污染原图）
         train_rate = getattr(args, 'train_rate', 1.0)
