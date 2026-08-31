@@ -1,5 +1,5 @@
-# BotMT
-Implementation for the paper: Multi-View Alignment in Generative Graph Self-Supervised Learning with Hybrid Tuning for Social Bot
+# BotMAR
+Implementation for the paper: **BotMAR: Aligned Mask-View Pretraining and Robust Dual-Brandch Tuning for Social Bot Detection**
 
 ### Dataset Preparation
 
