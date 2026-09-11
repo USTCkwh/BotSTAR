@@ -1,5 +1,5 @@
-# BotMAR
-Implementation for the paper: **BotMAR: Aligned Mask-View Pretraining and Robust Dual-Brandch Tuning for Social Bot Detection**
+# BotSTAR
+Implementation for the paper: **BotSTAR: Stable Representation Transfer and Robust Adaptation for Social Bot Detection**
 
 ### Dataset Preparation
 
